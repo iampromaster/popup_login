@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;  
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #71C562;
+}
+.container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 7px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s 0.5s ease-in;
+  transform: scale(0);
+}
+.container h2 {
+  position: relative;
+  font-size: 40px;
+  font-weight: 800;
+  padding: 20px 0;
+  color: #222;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.container h2::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #c0c0c0;
+  left: 0;
+  bottom: -10px;
+}
+.container label .fa-times {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 25px;
+  color: #71C562;
+  cursor: pointer;
+  z-index: 1;
+}
+.container label .fa-times:active {
+  transform: rotate(720deg);
+  transition: 1s ease;
+}
+.container  form {
+  margin: 30px 0;
+}
+.container form label {
+  position: relative;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  color: #222;
+}
+.container form label:;after {
+  position: absolute;
+  content: '*';
+  color: crimson;
+}
+input[type="text"],
+input[type="password"]{
+  width: 350px;
+  height: 50px;
+  border: 1px solid #c0c0c0;
+  padding: 0 20px;
+  font-size: 18px;
+  border-radius: 25px;
+  transition: 0.3s ease-in; 
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 3px solid #71C562;
+  color: #71C562;
+}
+.container form #user {
+  margin-bottom: 10px;
+}
+.container form .forgetpw {
+  display: block;
+  margin: 3px 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #696969;
+}
+.container form .forgetpw:hover {
+  text-decoration: underline;
+  color: #71C562;
+}
+.container form button {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #71C562;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.container form button .fa-send {
+  color: #fff;
+  font-size: 20px;
+}
+.container form button:active {
+  transform: scale(0.98);
+}
+
+.container form button  #btn {
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 400;
+}
+.container form .signup {
+  width: 100%;
+  padding: 3px 0;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+}
+.container form .signup a {
+  color: #71C562;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+.popupbtn {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 7px;
+  cursor: pointer;
+  overflow: hidden;;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.popupbtn::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 90%;
+  background-color: rgba(254, 254, 254, 0.2);
+  left: 0;
+  top: 0;
+  border-radius: 7px;
+  z-index: -1;
+}
+.popupbtn:active {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(.98);
+  transition: 0.3s ease;
+}
+#check:checked ~ .container {
+  transform: scale(1);
+}
